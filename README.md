@@ -10,12 +10,12 @@ We all know that overeating is a big issue. However, with more and more people g
 
 *A list of research questions you would like to address during the project.*
 
-• How can we use html data?
-• How can we take advantage of the cluster to use larger datasets and to perform calculations?
-• How can we efficiently sort through data to get the desired subset of information?
-• Are there common nutient deficiencies in vegetarian diets?
-• What (vegetarian) ingredients can help combat these deficiencies?
-• Are certain types of cuisine better suited to a healthy vegetarian diet?
+* How can we use html data?
+* How can we take advantage of the cluster to use larger datasets and to perform calculations?
+* How can we efficiently sort through data to get the desired subset of information?
+* Are there common nutient deficiencies in vegetarian diets?
+* What (vegetarian) ingredients can help combat these deficiencies?
+* Are certain types of cuisine better suited to a healthy vegetarian diet?
 
 ## Dataset
 
@@ -31,12 +31,12 @@ Once we have a vegetarian dataset, we will examine key nutrient levels throughou
 
 *Add here a sketch of your planning for the next project milestone.*
 
-• Get ingredient and nutrient data from the html files
-• Exclude meat and fish recipes from the data
-• Examine distributions and modes of key nutrient amounts and compare with recommended dietary intake
-• For consistently low nutrient levels, compare the recipes with higher levels of these nutrients to identify corresponding ingredients
-• Common-sense determination if its feasible to include these more into the diet
-• Create general nutrient profiles for different types of cuisine
+* Get ingredient and nutrient data from the html files
+* Exclude meat and fish recipes from the data
+* Examine distributions and modes of key nutrient amounts and compare with recommended dietary intake
+* For consistently low nutrient levels, compare the recipes with higher levels of these nutrients to identify corresponding ingredients
+* Common-sense determination if its feasible to include these more into the diet
+* Create general nutrient profiles for different types of cuisine
 
 ## Questions for TAs
 

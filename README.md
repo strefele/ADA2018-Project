@@ -26,7 +26,7 @@ We will use the dataset called recipePages on the cluster, and described as Cook
 
 The first step in processing the data will be to remove all meat and fish dishes. We will create a document with a list of corresponding words to exclude. Care will have to be taken with cases such as chicken broth that can easily be replaced with vegetable broth.
 
-Once we have a vegetarian dataset, we will examine key nutrient levels throughout the recipes, and compare these levels to the recommended dietary intake, taking care that we look consistently per serving. Recommended dietary intakes will be taken manually from the FDA website and kept in a separate document. If feasible (depending on the number of recipes concerned), we can look at recipes where a common deficiency is not present and try to identify the ingredient(s) responsible. We further plan on dividing the vegetarian recipes based on type of cuisine, and creating general nutrient profiles for each.
+Once we have a vegetarian dataset, we will examine key nutrient levels throughout the recipes, and compare these levels to the recommended dietary intake, taking care that we look consistently per serving. Recommended dietary intakes will be taken manually from the FDA recommendations on dietary values and kept in a separate document. If feasible (depending on the number of recipes concerned), we can look at recipes where a common deficiency is not present and try to identify the ingredient(s) responsible. We further plan on dividing the vegetarian recipes based on type of cuisine, and creating general nutrient profiles for each.
 
 ## A list of internal milestones up until project milestone 2
 

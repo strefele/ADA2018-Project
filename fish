@@ -9,7 +9,6 @@ salmon
 anchovy
 anchovies
 catfish
-shark
 swordfish
 trout
 turbot
@@ -24,3 +23,5 @@ langoustine
 prawn
 urchin
 eel
+halibut
+haddock

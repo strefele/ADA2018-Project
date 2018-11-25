@@ -20,11 +20,13 @@ First we thought of using the dataset recipePages on the cluster, and described 
 
 First is data collection. BeautifulSoup will be used to parse html data. The html code from allrecipes.com will be examined to find the tags corresponding to the desired information, about both ingredients and nutrition. This information will then be extracted into pandas dataframes. This method requires the URL for each recipe, and ParseHub will be used to obtain these.
 
-The data must be processed to separate values such as a nutrient name and amount. The next step in processing will be to remove all meat and fish dishes. We will create a document with a list of corresponding words to exclude. Care will have to be taken with cases such as chicken broth that can easily be replaced with vegetable broth.
+The data must be processed to separate values such as a nutrient name and amount. The next step in processing will be to remove all meat and fish dishes. We will create a document with a list of corresponding words to exclude. Care will have to be taken with cases such as chicken broth that can easily be replaced with vegetable broth. We discovered that almost every recipes from the  "diner" is actually carnivorous. From the roughly 1000 recipes extracted, less than ten did not contain any meat or fish. We thus chose to also extract recipes from the vegetarian version of the website.
 
 Once we have a vegetarian dataset, we will examine key nutrient levels throughout the recipes, and compare these levels to the recommended dietary intake, taking care that we look consistently per serving and with the same units. Recommended dietary intakes will be taken manually from the FDA recommendations on dietary values and kept in a separate document. If feasible (depending on the number of recipes concerned), we can look at recipes where a common deficiency is not present and try to identify the ingredient(s) responsible.
 
 Finally, we will compare the vegetarian dataset to the original one, supposed to be representative of an omnivorous diet. In this case we will see if there are trends of nutrient deficiencies common to both, or clear differences. Once again this comparison is based on the FDA recommended dietary values.
+
+More recipes will be scraped as we need for the comparison analysis.
 
 ## A list of internal milestones up until project milestone 2
 

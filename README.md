@@ -3,41 +3,39 @@
 
 ## Abstract
 
-We all know that overeating is a big issue. However, with more and more people going on diets or becoming vegetarian, we decided to investigate whether these people are still getting the recommended dietary intake of key nutrients. We will use data from cooking recipes to get a realistic idea of what they are eating. As deficiencies appear, compared to recommended intake, we will investigate what ingredients could be used to combat these cases. Finally, we will compare the nutrient deficiencies of vegetarian versus omnivorous diets to find common trends and identify large differences.
+We all know that overeating is a big issue. However, with more and more people going on diets or becoming vegetarian, we decided to investigate how this type of meal compares, in terms of nutrient profile, to meals containing meat, poultry, or fish. We will use data from cooking recipes to get a realistic idea of what is eaten. Macromolecule profiles will be compared to recommended values as percentages of total caloric intake. For other nutrients, we will look at how values compare across meal types. As differences appear, we will try to determine what sort of ingredients may be responsible.
 
 ## Research questions
 
 * How can we scrape and use html data?
 * How can we efficiently sort through data to get the desired subset of information?
-* Are there common nutient deficiencies in vegetarian diets?
-* What (vegetarian) ingredients can help combat these deficiencies?
-* How does a vegetarian diet compare with an omnivorous one, in terms of nutrition?
+* Are there common nutient deficiencies or overdoses across multiple meal types?
+* What ingredients could be responsible for deficiencies or overdoses?
+* How, in terms of nutrition, do vegetarian meals compare with those containing fish, meat, or poultry?
 
 
 ## Dataset
 
-First we thought of using the dataset recipePages on the cluster, and described as Cooking Recipes in the excel document. However, we learned that the perl scripts created by Robert West do not extract all the nutritional information that we need. Therefore, we use web scraping to get the necessary data from allrecipes.com. If time permits, we will add more cooking websites to our repertoire, but since we are unfamiliar with web scraping we will start with just one recipe website.
+First we thought of using the dataset recipePages on the cluster, and described as Cooking Recipes in the excel document. However, we learned that the perl scripts created by Robert West do not extract all the nutritional information that we need. Therefore, we use web scraping to get the necessary data from allrecipes.com. Desserts are ignored since there are so many they would skew the nutrient profiles towards high fat and sugar content in vegetarian meal types. We noticed farther into data analysis that we were missing calories for each recipe. We decided for reasons of time contstraint that we would calculate the calories for each recipe rather than scraping everything again. With more time, we would scrape again, and add more cooking websites to our repertoire.
 
-First is data collection. BeautifulSoup is be used to parse html data. The html code from allrecipes.com is be examined to find the tags corresponding to the desired information, about both ingredients and nutrition. This information is then extracted into pandas dataframes. This method requires the URL for each recipe, and ParseHub is be used to obtain these.
+First is data collection. BeautifulSoup is be used to parse html data. The html code from allrecipes.com is examined to find the tags corresponding to the desired information, about both ingredients and nutrition. This information is then extracted into pandas dataframes. This method requires the URL for each recipe, and ParseHub is be used to obtain these with a semi-interactive interface.
 
-The data must be processed to separate values such as a nutrient name and amount. The next step in processing is to create a vegetarian dataste. We originally thought to remove all meat and fish dishes from dinner recipes. To do this, we created text documents containing words referring to meat and fish that were supposed to be excluded. However, we discovered that almost every recipe from the section "dinner" contains meat or fish. From the roughly 1000 recipes extracted, less than ten did not contain any meat or fish. Therefore we extracted recipes from the "vegetarian" category on the website. We plan on merging the vegetarian dataset with the more varied one, since most people eat a mix of vegetarian and meat dishes.
+The data must be processed to separate values such as a nutrient name and amount. Ingredients, nutrients, and general data about the recipes are put into separate datasets and are cleaned. We merge data collected from allrecipes.com under different tags to create a large general dataset for each of these categories. Handmade text documents containing words specific to fish, meat, and poultry respectively are created. These are used to create datasets specifically for different meal types.
 
-Once we have a vegetarian dataset, we examine key nutrient levels throughout the recipes, and compare these levels to the recommended dietary intake, taking care that we look consistently per serving and with the same units. Recommended dietary intakes is taken manually from the FDA recommendations on dietary values and kept in a separate document. If feasible (depending on the number of recipes concerned), we can look at recipes where a common deficiency is not present and try to identify the ingredient(s) responsible.
+Caloric content for each recipe is calculated, as well as the percentage to which each of the macromolecules (fat, carbohydrates, and protein) contribute. These percentages are compared with those recommended by the National Institute of Health, as well as between meal types. Histogram profiles for vitamins and minerals are also compared between meal types to identify differences. In this last case, we cannot compare with recommended values since they are given daily but the information we have is per serving.
 
-Finally, we will compare the vegetarian dataset to the original one, supposed to be representative of an omnivorous diet. In this case we will see if there are trends of nutrient deficiencies common to both, or clear differences. Once again this comparison is based on the FDA recommended dietary values.
+Where large differences are noted between meal types, we will perform statistical analysis to try and determine what type of ingredients may be responsible.
 
-More recipes will be scraped as we need for the comparison analysis.
 
 ## A list of internal milestones
 
 
 * Scrape ingredient and nutrient data from allrecipes.com
-* Create a vegetarian dataset
+* Create datasets for different meal types
+* Compare macromolecules (as percentage of total calories) with recommended values as well as between meal types
 * Examine histogram distributions and statistics of key nutrient amounts
-* Compare nutrient quantities (mode or median) with recommended dietary intake
-* For consistently low nutrient levels, compare the ingredients in recipes that have higher levels of these nutrients to identify what ingredient may be rescuing the deficiency
-* Determine if its feasible to include these more into the diet (is increasing the quantity of the ingredient reasonable? To do this we can check if high quantities are used)
-* Compare vegetarian and omnivorous diets by looking at median/mode of nutrient quantities and by comparing histogram distributions
+* For consistently different nutrient levels, compare the ingredients in recipes that have higher levels of these nutrients to identify what ingredient may be responsible
+* Determine if we could modify the diet accordingly (in terms of quantity, balancing different types of recipes, etc.)
 
 ## Questions for TAs
 

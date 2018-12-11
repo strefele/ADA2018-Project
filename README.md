@@ -10,7 +10,6 @@ We all know that overeating is a big issue. However, with more and more people g
 * How can we scrape and use html data?
 * How can we efficiently sort through data to get the desired subset of information?
 * Are there common nutient deficiencies or overdoses across multiple meal types?
-* What ingredients could be responsible for deficiencies or overdoses?
 * How, in terms of nutrition, do vegetarian meals compare with those containing fish, meat, or poultry?
 
 
@@ -24,20 +23,22 @@ The data must be processed to separate values such as a nutrient name and amount
 
 Caloric content for each recipe is calculated, as well as the percentage to which each of the macromolecules (fat, carbohydrates, and protein) contribute. These percentages are compared with those recommended by the National Institute of Health, as well as between meal types. Histogram profiles for vitamins and minerals are also compared between meal types to identify differences. In this last case, we cannot compare with recommended values since they are given daily but the information we have is per serving.
 
-Where large differences are noted between meal types, we will perform statistical analysis to try and determine what type of ingredients may be responsible.
-
 
 ## A list of internal milestones
-
 
 * Scrape ingredient and nutrient data from allrecipes.com
 * Create datasets for different meal types
 * Compare macromolecules (as percentage of total calories) with recommended values as well as between meal types
 * Examine histogram distributions and statistics of key nutrient amounts
-* For consistently different nutrient levels, compare the ingredients in recipes that have higher levels of these nutrients to identify what ingredient may be responsible
-* Determine if we could modify the diet accordingly (in terms of quantity, balancing different types of recipes, etc.)
 
-## Questions for TAs
 
-*Add here some questions you have for us, in general or project-specific.*
+## Contributions of group members
 
+**Jérémy Alexandre**
+Data collection, calorie conversions, nutrient histograms, planning the report and poster
+
+**Abigail Strefeler**
+Project idea and plan of implementation, data collection function, creating meal type datasets, calorie conversions, part of the report
+
+**Léo Sumi**
+Data cleaning

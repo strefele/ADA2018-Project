@@ -1,5 +1,5 @@
 ﻿
-# Is a vegetarian diet truly healthier?
+# Are vegetarian meals truly healthier?
 
 ## Abstract
 
@@ -30,15 +30,16 @@ Caloric content for each recipe is calculated, as well as the percentage to whic
 * Create datasets for different meal types
 * Compare macromolecules (as percentage of total calories) with recommended values as well as between meal types
 * Examine histogram distributions and statistics of key nutrient amounts
+* Identify ingredient types responsible for differences between the nutrient profiles
 
 
 ## Contributions of group members
 
 **Jérémy Alexandre**
-Data collection, calorie conversions, nutrient histograms, planning the report and poster
+Data collection, calorie conversions, nutrient histograms, part of the report, planning the poster
 
 **Abigail Strefeler**
 Project idea and plan of implementation, data collection function, creating meal type datasets, calorie conversions, part of the report
 
 **Léo Sumi**
-Data cleaning
+Data cleaning, poster
